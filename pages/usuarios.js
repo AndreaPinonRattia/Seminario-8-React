@@ -8,7 +8,7 @@ export default function Usuarios() {
   const [error, setError] = useState(null);
   const [selectedUser, setSelectedUser] = useState(null);
   
-  const URL = "http://localhost:3000/api/user";
+  const URL = "http://localhost:3001/api/user";
   useEffect(() => {
     setLoading(true);
     const fetchUsers = async () => {
@@ -49,7 +49,7 @@ export default function Usuarios() {
 
   const handleDelete = async (userId) => {
     try {
-      const response = await fetch(`http://localhost:3000/api/user/${userId}`, {
+      const response = await fetch(`http://localhost:3001/api/user/${userId}`, {
         method: 'DELETE',
       });
 
